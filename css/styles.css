@@ -5,11 +5,12 @@
 /* Root Variables */
 :root {
     /* Colors */
-    --primary-color: #6A0DAD;       /* Purple (primary) */
-    --secondary-color: #8A2BE2;     /* Violet (secondary) */
+    --primary-color: #8B4513;       /* Brown (primary) */
+    --secondary-color: #6A0DAD;     /* Purple (secondary) */
     --accent-color: #FFD700;        /* Gold */
     --dark-color: #2c3e50;          /* Dark blue-gray */
-    --light-color: #ecf0f1;         /* Light gray */
+    --light-color: #f5e6d3;         /* Light beige (sunset tone) */
+    --sunset-gradient: linear-gradient(135deg, rgba(139, 69, 19, 0.95), rgba(106, 13, 173, 0.85), rgba(255, 215, 0, 0.8));
     --text-color: #34495e;          /* Text gray */
     --white: #ffffff;
     --border-color: #bdc3c7;
@@ -58,7 +59,8 @@ html {
 body {
     font-family: var(--font-primary);
     color: var(--text-color);
-    background-color: var(--white);
+    background: linear-gradient(180deg, #8B4513 0%, #6A0DAD 50%, #FFD700 100%);
+    min-height: 100vh;
     line-height: 1.6;
 }
 
@@ -304,6 +306,7 @@ section {
 
 .welcome h2 {
     text-align: center;
+    color: var(--primary-color);
 }
 
 .welcome-grid {
@@ -320,6 +323,8 @@ section {
     text-align: center;
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
+    border: 1px solid var(--white);
+    border-top: 4px solid var(--primary-color);
 }
 
 .welcome-card:hover {
@@ -334,11 +339,12 @@ section {
 
 /* Featured Courses */
 .featured-courses {
-    background-color: var(--white);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.7) 0%, rgba(139, 69, 19, 0.8) 50%, rgba(106, 13, 173, 0.9) 100%);
 }
 
 .featured-courses h2 {
     text-align: center;
+    color: var(--white);
 }
 
 .courses-grid {
@@ -349,10 +355,11 @@ section {
 }
 
 .course-card {
-    background: var(--light-color);
+    background: rgba(245, 230, 211, 0.95);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
-    border-left: 5px solid var(--primary-color);
+    border: 1px solid var(--white);
+    border-left: 5px solid var(--secondary-color);
     transition: all 0.3s ease;
 }
 
@@ -384,12 +391,13 @@ section {
 
 /* About Content */
 .about-content {
-    background-color: var(--white);
+    background-color: var(--light-color);
 }
 
 .about-content h2 {
     text-align: center;
     margin-bottom: var(--spacing-lg);
+    color: var(--primary-color);
 }
 
 .about-content > .container > p {
@@ -398,6 +406,7 @@ section {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    color: var(--text-color);
 }
 
 .values-grid {
@@ -408,9 +417,10 @@ section {
 }
 
 .value-card {
-    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(210, 105, 30, 0.1));
+    background: var(--white);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
+    border: 1px solid var(--white);
     border-left: 5px solid var(--primary-color);
 }
 
@@ -421,11 +431,12 @@ section {
 
 /* Video Lessons */
 .video-lessons {
-    background-color: var(--light-color);
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.85) 0%, rgba(106, 13, 173, 0.85) 50%, rgba(255, 215, 0, 0.75) 100%);
 }
 
 .video-lessons h2 {
     text-align: center;
+    color: var(--white);
 }
 
 .videos-grid {
@@ -441,6 +452,8 @@ section {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
+    border: 1px solid var(--white);
+    border-top: 3px solid var(--secondary-color);
 }
 
 .video-card:hover {
@@ -507,11 +520,12 @@ section {
 
 /* Instructors */
 .instructors {
-    background-color: var(--white);
+    background-color: var(--light-color);
 }
 
 .instructors h2 {
     text-align: center;
+    color: var(--primary-color);
 }
 
 .instructors-grid {
@@ -522,12 +536,14 @@ section {
 }
 
 .instructor-card {
-    background: var(--light-color);
+    background: var(--white);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
     text-align: center;
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
+    border: 1px solid var(--white);
+    border-top: 4px solid var(--primary-color);
 }
 
 .instructor-card:hover {
@@ -553,11 +569,12 @@ section {
 
 /* Why Choose */
 .why-choose {
-    background-color: var(--light-color);
+    background: linear-gradient(135deg, rgba(106, 13, 173, 0.85) 0%, rgba(255, 215, 0, 0.7) 50%, rgba(139, 69, 19, 0.85) 100%);
 }
 
 .why-choose h2 {
     text-align: center;
+    color: var(--white);
 }
 
 .features-list {
@@ -571,7 +588,8 @@ section {
     background: var(--white);
     padding: var(--spacing-lg);
     border-radius: var(--radius-lg);
-    border-left: 5px solid var(--primary-color);
+    border: 1px solid var(--white);
+    border-left: 5px solid var(--secondary-color);
 }
 
 .feature h3 {
@@ -585,6 +603,7 @@ section {
 
 .why-services h2 {
     text-align: center;
+    color: var(--primary-color);
 }
 
 .reasons-grid {
@@ -600,6 +619,8 @@ section {
     border-radius: var(--radius-lg);
     text-align: center;
     box-shadow: var(--shadow-sm);
+    border: 1px solid var(--white);
+    border-top: 3px solid var(--primary-color);
 }
 
 .reason h3 {
@@ -609,11 +630,12 @@ section {
 
 /* Courses Section */
 .courses-section {
-    background-color: var(--white);
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.9) 0%, rgba(106, 13, 173, 0.85) 50%, rgba(255, 215, 0, 0.7) 100%);
 }
 
 .courses-section h2 {
     text-align: center;
+    color: var(--white);
 }
 
 .course-category {
@@ -621,7 +643,7 @@ section {
 }
 
 .course-category > h3 {
-    color: var(--primary-color);
+    color: var(--white);
     font-size: 1.8rem;
     margin-bottom: var(--spacing-xl);
     padding-bottom: var(--spacing-md);
@@ -629,11 +651,12 @@ section {
 }
 
 .course-item {
-    background-color: var(--light-color);
+    background-color: rgba(245, 230, 211, 0.95);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
     margin-bottom: var(--spacing-lg);
-    border-left: 5px solid var(--primary-color);
+    border: 1px solid var(--white);
+    border-left: 5px solid var(--secondary-color);
 }
 
 .course-header {
@@ -680,6 +703,7 @@ section {
 
 .special-programs h2 {
     text-align: center;
+    color: var(--primary-color);
 }
 
 .programs-grid {
@@ -695,8 +719,10 @@ section {
     border-radius: var(--radius-lg);
     text-align: center;
     box-shadow: var(--shadow-md);
-    border-top: 4px solid var(--accent-color);
+    border: 1px solid var(--white);
+    border-top: 4px solid var(--primary-color);
 }
+
 
 .program-card h3 {
     color: var(--primary-color);
@@ -704,11 +730,12 @@ section {
 
 /* Services Section */
 .services-section {
-    background-color: var(--white);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.7) 0%, rgba(139, 69, 19, 0.85) 50%, rgba(106, 13, 173, 0.9) 100%);
 }
 
 .services-section h2 {
     text-align: center;
+    color: var(--white);
 }
 
 .service-category {
@@ -716,7 +743,7 @@ section {
 }
 
 .service-category > h3 {
-    color: var(--primary-color);
+    color: var(--white);
     font-size: 1.8rem;
     margin-bottom: var(--spacing-md);
     padding-bottom: var(--spacing-md);
@@ -731,9 +758,10 @@ section {
 }
 
 .detail-box {
-    background-color: var(--light-color);
+    background-color: rgba(245, 230, 211, 0.95);
     padding: var(--spacing-lg);
     border-radius: var(--radius-lg);
+    border: 1px solid var(--white);
 }
 
 .detail-box h4 {
@@ -764,7 +792,7 @@ section {
 
 /* Contact Section */
 .contact-section {
-    background-color: var(--white);
+    background-color: var(--light-color);
 }
 
 .contact-grid {
@@ -776,14 +804,16 @@ section {
 
 .contact-form-box,
 .contact-info-box {
-    background-color: var(--light-color);
+    background-color: var(--white);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
+    border: 1px solid var(--white);
 }
 
 .contact-form-box h2,
 .contact-info-box h2 {
     color: var(--primary-color);
+    margin: 0 0 var(--spacing-lg) 0;
 }
 
 /* Forms */
@@ -851,11 +881,12 @@ section {
 
 /* Social Media Section */
 .social-media-section {
-    background-color: var(--light-color);
+    background: linear-gradient(135deg, rgba(106, 13, 173, 0.85) 0%, rgba(255, 215, 0, 0.7) 50%, rgba(139, 69, 19, 0.85) 100%);
 }
 
 .social-media-section h2 {
     text-align: center;
+    color: var(--white);
 }
 
 .social-media-grid {
@@ -875,6 +906,8 @@ section {
     display: block;
     text-decoration: none;
     color: inherit;
+    border: 1px solid var(--white);
+    border-top: 3px solid var(--secondary-color);
 }
 
 .social-card:hover {
@@ -906,11 +939,12 @@ section {
 
 /* FAQ Section */
 .faq-section {
-    background-color: var(--white);
+    background-color: var(--light-color);
 }
 
 .faq-section h2 {
     text-align: center;
+    color: var(--primary-color);
 }
 
 .faq-grid {
@@ -921,9 +955,10 @@ section {
 }
 
 .faq-item {
-    background-color: var(--light-color);
+    background-color: var(--white);
     padding: var(--spacing-lg);
     border-radius: var(--radius-lg);
+    border: 1px solid var(--white);
     border-left: 5px solid var(--primary-color);
 }
 
@@ -1192,4 +1227,3 @@ section {
 .text-primary { color: var(--primary-color); }
 .text-secondary { color: var(--secondary-color); }
 .text-accent { color: var(--accent-color); }
-
